@@ -3,10 +3,10 @@
 // mas tenha também um atributo quintal(boolean) 
 
 
-class Casa extends Imovel {
-    private $quintal;
+final class Casa extends Imovel {
+    private bool $quintal;
     
-    public function __construct($quartos, $valor, $endereco, $quintal) {
+    public function __construct(int $quartos, float $valor, string $endereco, bool $quintal) {
         parent::__construct($quartos, $valor, $endereco);
         $this->quintal = $quintal;
     }
@@ -15,5 +15,4 @@ class Casa extends Imovel {
         return parent::__toString().", Quintal: ".($this->quintal ? "Sim" : "Não");
     }
 }
-
 ?>

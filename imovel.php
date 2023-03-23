@@ -5,19 +5,18 @@
  //com um construtor e um tostring em php
 
 class Imovel {
-    private $quartos;
-    private $valor;
-    private $endereco;
-    
-    public function __construct($quartos, $valor, $endereco) {
-        $this->quartos = $quartos;
-        $this->valor = $valor;
-        $this->endereco = $endereco;
-    }
-    
-    public function __toString() {
-        return "Endereço: ".$this->endereco.", Quartos: ".$this->quartos.", Valor: R$".$this->valor;
-    }
-}
+  private int $quartos;
+  private float $valor;
+  private string $endereco;
 
+  function __construct(int $quartos, float $valor, string$endereco) {
+    $this->quartos = $quartos;
+    $this->valor = $valor;
+    $this->endereco = $endereco;
+  }
+
+  function __toString() {
+    return "Imóvel: {$this->quartos} quartos, valor R$ {$this->valor}, endereço: {$this->endereco}";
+  }
+}
 ?>

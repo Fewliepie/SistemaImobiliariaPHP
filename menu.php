@@ -1,23 +1,20 @@
 <?php
 
-require 'metodos/cadastrar.php';
+include(imovel.php);
+include(casa.php);
+include(apartamento.php);
 
 function menu() {
     
-    $imoveis = array (); 
+    $casas = array();
     $opcao = 0;
-
 
     do {
 
         echo " 1- selecione para cadastrar casa. ". "\n";
         echo " 2- selecione para cadastrar apartamento. ". "\n";
-        echo " 3- listar imóveis.". "\n";
+        echo " 3- listar casas.". "\n";
         echo " 4- Sair". "\n";
-
-        echo ("---------------------------------\n");
-        echo ("Total de imóveis cadastrados: ".count($imoveis)."\n");
-        echo ("---------------------------------\n");
 
         $opcao = (int) readline("Opção: ");
 
@@ -28,12 +25,10 @@ function menu() {
                 $valor      = readline("Valor do imóvel: ");
                 $endereco   = readline("Insira o endereço: ");
                 $quintal    = readline("Possui quintal? "); 
-                $condominio = readline("Valor do condminio: ");
 
-                $cadastrado = new CadastroImoveis ($quartos, $valor, $endereco, $quintal, $condominio);
+                $casa = new Casa ($quartos, $valor, $endereco, $quintal, $condominio);
 
-                // guarda obj no vetor
-                $imoveis[] = $cadastrado;
+                $casa[] = $casa;
 
                 echo "Imóvel cadastrado. "."\n";
                 break;
