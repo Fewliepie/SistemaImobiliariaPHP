@@ -26,7 +26,7 @@ function menu() {
                 $endereco   = readline("Insira o endereço: ");
                 $quintal    = readline("Possui quintal? "); 
 
-                $casa = new Casa ($quartos, $valor, $endereco, $quintal, $condominio);
+                $casa = new Casa($quartos, $valor, $endereco, $quintal, $condominio);
 
                 $casa[] = $casa;
 
@@ -54,3 +54,4 @@ function menu() {
 
 }
 menu ();
+?>

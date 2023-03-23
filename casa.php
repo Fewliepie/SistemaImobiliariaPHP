@@ -1,7 +1,4 @@
 <?php
-//Agora preciso de uma classe "casa" que herde tudo de imóvel,
-// mas tenha também um atributo quintal(boolean) 
-
 
 final class Casa extends Imovel {
     private bool $quintal;
