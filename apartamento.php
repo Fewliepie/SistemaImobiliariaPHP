@@ -1,7 +1,7 @@
 <?php
 
-final class Apartamento extends Imovel {
-  private float $condominio;
+class Apartamento extends Imovel {
+  private $condominio;
 
   function __construct(int $quartos, float $valor, string $endereco, float $condominio) {
     parent::__construct($quartos, $valor, $endereco);

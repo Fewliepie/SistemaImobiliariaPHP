@@ -1,9 +1,9 @@
 <?php
 
 class Imovel {
-  private int $quartos;
-  private float $valor;
-  private string $endereco;
+  private $quartos;
+  private $valor;
+  private $endereco;
 
   function __construct(int $quartos, float $valor, string $endereco) {
     $this->quartos = $quartos;

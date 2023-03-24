@@ -1,7 +1,7 @@
 <?php
 
-final class Casa extends Imovel {
-    private bool $quintal;
+class Casa extends Imovel {
+    private $quintal;
     
     public function __construct(int $quartos, float $valor, string $endereco, bool $quintal) {
         parent::__construct($quartos, $valor, $endereco);
